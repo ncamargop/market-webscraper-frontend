@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { Container, CssBaseline } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SearchBar from "./components/SearchBar";
+import ProductDetail from "./components/ProductDetail";
+import HomeContainer from "./components/HomeContainer";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
+import "./css/app.css";
 
-function App() {
+const App = () => {
+  const [search, setSearch] = useState("");
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: "dark",
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <h1>PRICE TRACKER</h1>
+      <h2>+7500 products</h2>
+      <Router>
+        <>
+          <Container>
+            <SearchBar search={search} setSearch={setSearch} />
+            <Routes>
+              <Route path="/" element={<HomeContainer />} />
+              <Route path="/products/:productId/" element={<ProductDetail />} />
+            </Routes>
+          </Container>
+        </>
+      </Router>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
