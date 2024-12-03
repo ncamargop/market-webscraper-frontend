@@ -7,6 +7,7 @@ This project relies on another repository for handling requests that needs to ru
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
+- [Preview](#preview)
 
 
 ## Installation
@@ -25,6 +26,8 @@ This project relies on another repository for handling requests that needs to ru
 
 4. Visit http://localhost:3000 to view the application.
 
+
+
 ## Usage
 
 After installing and starting the application, you can:
@@ -33,3 +36,13 @@ After installing and starting the application, you can:
 -Compare the price of each product for each store.
 -View interactive price change charts and index values over time.
 
+
+
+
+
+
+## Preview
+
+![price-tracker1](https://github.com/user-attachments/assets/36a639f9-f256-4713-a3db-0d3bf57485f8)
+![price-tracker2](https://github.com/user-attachments/assets/6ce74450-c32b-4ca5-8cc8-6127cad06ea9)
+![price-tracker3](https://github.com/user-attachments/assets/4e22c9dd-22ea-4af8-901c-dcc6f8c94929)
